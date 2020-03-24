@@ -12,7 +12,7 @@ body{
 }
 #header{
   width: 100vw;
-  height: 100vh;
+  height: 100%;
 }
 .square1{
   position: relative;
@@ -89,6 +89,7 @@ body{
   text-align: center;
   width: 80vw;
   position: absolute;
+  top:100%;
   left: 10vw;
   margin-top: 30px;
 }
