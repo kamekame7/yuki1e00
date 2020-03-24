@@ -13,6 +13,9 @@ body{
 #header{
   width: 100vw;
   height: 100%;
+  display: flex;
+justify-content: center;
+align-items: center;
 }
 .square1{
   position: relative;
@@ -66,11 +69,12 @@ body{
   position: absolute;
   width: 60vw;
   height: 50%;
-  vertical-align: middle;
+  line-height: 50%;
   font-size: 15vh;
   padding: 0;
   bottom:25%;
   left: 20vw;
+  top: 25%;
   right: 20vw;
   text-align: center;
   font-family: NotoSerifCJKjp;
@@ -96,15 +100,34 @@ h1{
   font-family: NotoSerifCJKjp;
   color: #FFF;
   font-size: 42px;
+  text-align: left;
+  margin: 10px;
+  margin-top: 45px;
 }
 h2{
   color: #fff;
   font-weight: 200;
   text-decoration: none;
+  font-size: 30px;
 }
 .iflame{
   width: 80vw;
   height: calc(80vw*0.56);
 }
+h3{
+  font-family: NotoSerifCJKjp;
+  color: #FFF;
+  font-size: 42px;
+}
 a:link { color: #1FDFDF; }
 a:visited { color: #1FDFDF; }
+.link{
+  text-decoration: none;
+  font-size:40px;
+  color:#FFF;
+  border-style: solid;
+  color: #1FDFDF;
+  padding:10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
