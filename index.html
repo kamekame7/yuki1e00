@@ -2,12 +2,29 @@
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="master.css">
     <meta name="robots" content="noindex">
     <link rel="shortcut icon" href="favicon.ico">
     <title>1E</title>
   </head>
   <body>
+    <!-- ローディング用 -->
+<div id="showloading">
+<!-- ローディング中に表示する画像（GIF）を用意 -->
+
+
+  <img src="GIF.gif"  class="centerimg" alt="loading">
+  <div class="centerdown">
+    Loading..
+  </div>
+
+
+
+</div>
+    <div id="contents" class="hidden">
+
+
     <div id="header">
       <div class="centertext"><p>1E</p></div>
     </div>
@@ -16,31 +33,85 @@
     </div>
     <div class="honbun">
       <h3>音楽祭から文化祭まで<br>1Eの作品や思い出をまとめました</h1><br>
-      <h1>1.クラスの１年間</h1>
-      <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1wxgHFT5RR7SAQX3bvtRHjZHlPKf7prpv/view?usp=sharing">こちら(Googleドライブ)</a><br>
-      <iframe src="https://drive.google.com/file/d/1wxgHFT5RR7SAQX3bvtRHjZHlPKf7prpv/preview" class="iflame"></iframe><br>
+        <div class="scroll">
+          <h1>1.クラスの１年間</h1>
+          <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1wxgHFT5RR7SAQX3bvtRHjZHlPKf7prpv/view?usp=sharing">こちら(Googleドライブ)</a><br>
+          <iframe src="https://drive.google.com/file/d/1wxgHFT5RR7SAQX3bvtRHjZHlPKf7prpv/preview" class="iflame"></iframe><br>
+        </div>
+        <div class="scroll">
       <h1>2.先生へ~生徒からのメッセージ~</h1>
       <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1Gvs_0Gc5tNQs8LvhJh48a8DzpBl2DKxm/view?usp=sharing">こちら(Googleドライブ)</a><br>
       <iframe src="https://drive.google.com/file/d/1Gvs_0Gc5tNQs8LvhJh48a8DzpBl2DKxm/preview" class="iflame"></iframe><br>
+</div>
+<div class="scroll">
       <h1>3.音楽祭のページ(?)</h1>
       <h2><a href="https://kamekame7.github.io/6341E/index1.html" class="link">リンク</a></h2><br>
+</div>
+<div class="scroll">
       <h1>4.文化祭タイムラプス</h1>
       <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1Sxf7FmoVH7qTw6a9fIgtM2AHW8JbQkm9/view?usp=sharing">こちら(Googleドライブ)</a><br>
       <iframe src="https://drive.google.com/file/d/1Sxf7FmoVH7qTw6a9fIgtM2AHW8JbQkm9/preview" class="iflame"></iframe><br>
+    </div>
+    <div class="scroll">
       <h1>5.文化祭スライドショー</h1>
       <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1eYbusgJFjXYXp5m7IRTp7piqDiQ7jrEy/view?usp=sharing">こちら(Googleドライブ)</a><br>
       <iframe src="https://drive.google.com/file/d/1eYbusgJFjXYXp5m7IRTp7piqDiQ7jrEy/preview" class="iflame"></iframe><br>
+    </div>
+    <div class="scroll">
       <h1>6.男の子の夢の中</h1>
       <h2>パソコンでの全画面表示は<a href="https://drive.google.com/file/d/1bXKL6FF7M0n6JKuMDTROha4_Lgl5J9vq/view?usp=sharing">こちら(Googleドライブ)</a><br>
       <iframe src="https://drive.google.com/file/d/1bXKL6FF7M0n6JKuMDTROha4_Lgl5J9vq/preview" class="iflame"></iframe><br>
+    </div>
+    <div class="scroll">
       <h1>6.電子版絵本!!!!</h1>
       <h2><a href="https://kamekame7.github.io/6341E/bunkasai/img/ehon.pdf" class="link">PDF</a><br>
+      </div>
+      <div class="scroll">
       <h1>7.曲、オリジナル壁紙等配布サイト</h1>
       <h2><a href="https://kamekame7.github.io/6341E/bunkasai/present.html" class="link">リンク</a><br>
+      </div>
+      <div class="scroll">
       <h1>おまけ</h1>
       <h2>全員の名前だけで作られた先生(自分の名前検索してみてね)<br><a href="mut.pdf" class="link">PDF</a></h2>
+</div>
       <h2>ここのページのリンクは誰にも教えないでください</h2>
+    </div>
     </div>
 
   </body>
+
+  <script type="text/javascript">
+  $(function() {
+
+  var h = $(window).height();
+
+  $('.hidden').css('display','none');
+  $('.pleasescroll').css('display','none');
+  $('#showloading').height(h).css('display','block');
+
+});
+$('head').append(
+'<style>.hidden{display:none;}'
+);
+$(window).on("load", function() {
+
+  $('#showloading').css('display','none');
+  $('.hidden').delay(400).fadeIn(1000);
+  $('.pleasescroll').delay(1500).fadeIn("slow");
+
+});
+  $(function(){
+	$(window).scroll(function (){
+		$('.scroll').each(function(){
+			var elemPos = $(this).offset().top;
+			var scroll = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			if (scroll > elemPos - windowHeight + 200){
+				$(this).addClass('scrollin');
+			}
+		});
+	});
+});
+
+  </script>
 </html>
