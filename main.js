@@ -13,8 +13,8 @@ $('head').append(
 $(window).on("load", function() {
 
 $('#showloading').css('display','none');
-$('.hidden').delay(4000).fadeIn(1000);
-$('.pleasescroll').delay(1500).fadeIn("slow");
+$('.hidden').delay(1000).fadeIn(3000);
+$('.pleasescroll').delay(3000).fadeIn("slow");
 
 });
 $(function(){
