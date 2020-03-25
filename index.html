@@ -7,42 +7,6 @@
     <meta name="robots" content="noindex">
     <link rel="shortcut icon" href="favicon.ico">
     <title>1E</title>
-
-      <script type="text/javascript">
-      $(document).ready(function() {
-
-      var h = $(window).height();
-
-      $('.hidden').css('display','none');
-      $('.pleasescroll').css('display','none');
-      $('#showloading').height(h).css('display','block');
-
-    });
-    $('head').append(
-    '<style>.hidden{display:none;}'
-    );
-    $(window).on("load", function() {
-
-      $('#showloading').css('display','none');
-      $('.hidden').delay(400).fadeIn(1000);
-      $('.pleasescroll').delay(1500).fadeIn("slow");
-
-    });
-      $(function(){
-    	$(window).scroll(function (){
-    		$('.scroll').each(function(){
-    			var elemPos = $(this).offset().top;
-    			var scroll = $(window).scrollTop();
-    			var windowHeight = $(window).height();
-    			if (scroll > elemPos - windowHeight + 200){
-    				$(this).addClass('scrollin');
-    			}
-    		});
-    	});
-    });
-
-      </script>
-  </head>
   <body>
     <!-- ローディング用 -->
 <div id="showloading">
@@ -108,11 +72,13 @@
       <div class="scroll">
       <h1>おまけ</h1>
       <h2>全員の名前だけで作られた先生(自分の名前検索してみてね)<br><a href="mut.pdf" class="link">PDF</a></h2>
+><br><br><br>
 </div>
       <h2>ここのページのリンクは誰にも教えないでください</h2>
     </div>
     </div>
-
+<script src="main.js"></script>
+<br><br><br><br>
   </body>
 
 </html>
