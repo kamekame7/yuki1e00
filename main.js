@@ -10,7 +10,13 @@ $('#showloading').height(h).css('display','block');
 $('head').append(
 '<style>.hidden{display:none;}'
 );
+$(window).on("load", function() {
 
+$('#showloading').css('display','none');
+$('.hidden').delay(4000).fadeIn(1000);
+$('.pleasescroll').delay(1500).fadeIn("slow");
+
+});
 $(function(){
 
 $(window).scroll(function (){
@@ -24,21 +30,4 @@ $(window).scroll(function (){
     }
   });
 });
-});
-WebFont.load(
-{
-  custom:
-  {
-    families: ['NotoSerifCJKjp']
-  },
-  active: function()
-  {
-
-
-    $('#showloading').css('display','none');
-    $('.hidden').delay(400).fadeIn(1000);
-    $('.pleasescroll').delay(1500).fadeIn("slow");
-
-    
-  },
 });
