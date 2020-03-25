@@ -11,8 +11,9 @@ $('head').append(
 '<style>.hidden{display:none;}'
 );
 $(window).on("load", function() {
-
-$('#showloading').css('display','none');
+  $('#showloading').delay(2200).queue(function(){
+  $(this).css('display','none');
+});
 $('.hidden').delay(1000).fadeIn(3000);
 $('.pleasescroll').delay(3000).fadeIn("slow");
 
